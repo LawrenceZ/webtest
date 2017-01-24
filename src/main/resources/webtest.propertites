@@ -1,0 +1,13 @@
+############################### DRIVER SETTINGS ################################
+driver.local=true
+driver.grid.url=localhost
+#firefox #chrome (chromedriver is required)  #ie (32!!! bit IEDriverServer is required even for 64bit OS)
+driver.browser.name=chrome
+################################################################################
+
+
+############################# ENVIRONMENT SETTINGS #############################
+############################## SELENIUM WEB PAGE ###############################
+environment.name=selenium
+environment.url=http://www.seleniumhq.org/
+################################################################################

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+	<!--Define custom levels before using them for filtering below.-->
+	<CustomLevels>
+		<CustomLevel name="PERFORMANCE" intLevel="450"/>
+	</CustomLevels>
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} | %-5level | [%thread] | - %msg%n"/>
+		</Console>
+		<!--Only enable/uncomment the File log tag below on your local, if you need to DEBUG-->
+		<File name="MyFile" fileName="target\logs\all.log" immediateFlush="true" append="false">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} | %-5level | [%thread] | %logger | - %msg%n"/>
+		</File>
+		<!--MyPerformance log tag below, used to run performance test-->
+		<RollingFile name="MyPerformance" fileName="target\logs\performance.csv" filePattern="target\logs\%d{MM-dd-yyyy}_performance.csv" immediateFlush="true" append="true">
+			<PatternLayout pattern="%d{MM-dd-yyyy,HH:mm:ss.SSS},[%-7level],[%thread],[%logger],%msg%n"/>
+			<ThresholdFilter level="INFO" onMatch="DENY" onMismatch="ACCEPT"/>
+			<Policies>
+				<TimeBasedTriggeringPolicy/>
+			</Policies>
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Root level="DEBUG">
+			<AppenderRef ref="Console" level="INFO"/>
+			<!--Only enable/uncomment the File log tag below on your local, if you need to DEBUG-->
+			<AppenderRef ref="MyFile"/>
+			<!--MyPerformance log tag below, used to run performance test-->
+			<AppenderRef ref="MyPerformance" level="PERFORMANCE"/>
+		</Root>
+	</Loggers>
+</Configuration>
