@@ -26,7 +26,7 @@
 		<guice.version>4.0-beta4</guice.version>
 		<!--<aspectj.version>1.8.1</aspectj.version>-->
 		<!--<allure.version>1.4.0.RC8</allure.version>-->
-		<yandex.properties.version>1.5</yandex.properties.version>
+		<yandex.properties.version>2.0.RC5</yandex.properties.version>
 		<diffutils.version>1.2.1</diffutils.version>
 		<opencsv.version>2.3</opencsv.version>
 		<log4j-api.version>2.3</log4j-api.version>
@@ -96,9 +96,14 @@
 			<version>${guice.version}</version>
 			<scope>test</scope>
 		</dependency>
+		<!--<dependency>-->
+		<!--<groupId>ru.yandex.qatools.properties</groupId>-->
+		<!--<artifactId>properties-loader</artifactId>-->
+		<!--<version>${yandex.properties.version}</version>-->
+		<!--</dependency>-->
 		<dependency>
-			<groupId>ru.yandex.qatools.properties</groupId>
-			<artifactId>properties-loader</artifactId>
+			<groupId>ru.qatools.commons</groupId>
+			<artifactId>properties</artifactId>
 			<version>${yandex.properties.version}</version>
 		</dependency>
 		<!--<dependency>-->

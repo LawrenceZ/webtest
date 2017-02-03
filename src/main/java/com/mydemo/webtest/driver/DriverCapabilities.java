@@ -1,11 +1,26 @@
 package com.mydemo.webtest.driver;
 
-import ru.yandex.qatools.properties.annotations.Resource;
+import ru.qatools.properties.Property;
+import ru.qatools.properties.Resource;
 
-import java.io.File;
 
 @Resource.Classpath("webtest.properties")
-public class DriverCapabilities {
+public interface DriverCapabilities {
 
-	private static final String slash = File.separator;
+//	private static final String FILE_SEPARATOR = File.separator;
+
+//	@Property("driver.local")
+//	private boolean driverLocal;
+
+	@Property("environment.name")
+	String getEnvName();
+//	private String envName;
+
+//	public boolean isDriverLocal() {
+//		return driverLocal;
+//	}
+
+//	public String getEnvName() {
+//		return envName;
+//	}
 }
