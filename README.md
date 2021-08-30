@@ -1,6 +1,8 @@
 QA-PLAYWRIGHT
 =============
 
+This project is a demonstration of how to use [playwright-java] to automate cross-browser web e2e tests.
+The application-under-test (AUT) is using a demo payment application ([realworld-app]) from cypress. 
 
 ## Table of content
 
@@ -16,4 +18,15 @@ QA-PLAYWRIGHT
   - [Report Portal](#report-portal)
 
 
----
+
+
+
+
+
+
+
+
+
+[//]: #
+[playwright-java]: https://github.com/microsoft/playwright-java
+[realworld-app]: https://github.com/cypress-io/cypress-realworld-app
